@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="js/materialize.min.js" ></script>
+	<script src="js/main.js" ></script>
+</head>
+<body>
+    <script type="text/javascript">
+function regWork(inpt){
+	document.getElementById("iframe").src=inpt;
+  }
+
+</script>
+	<form id="LoginModal" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h5 class="center-align">Вход</h5>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-account-circle prefix"></i>
+					<input id="name" type="text" class="validate">
+					<label for="name">Имя</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-lock prefix"></i>
+					<input id="password" type="password" class="validate">
+					<label for="password">Пароль</label>
+				</div>
+				<div class="col s12">
+					<p class="tme">Выберите</p>
+					<p>
+				      	<input name="group1" type="radio" id="test1" />
+				      	<label for="test1">Работник</label>
+				    </p>
+				    <p>
+				      	<input name="group1" type="radio" id="test2" />
+				      	<label for="test2">Покупатель</label>
+				    </p>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="waves-effect btn-flat tooltipped" data-position="top" data-tooltip="Send"><i class="zmdi zmdi-mail-send"></i></a>
+			<a href="#!" class="modal-action modal-close waves-effect btn-flat tooltipped" data-position="top" data-tooltip="Cancel"><i class="zmdi zmdi-close"></i></a>
+		</div>
+	</form>
+	<form id="RegModal" class="modal modal-fixed-footer">
+		<div class="modal-content">
+			<h5 class="center-align">Регистрация</h5>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-account prefix"></i>
+					<input id="name" type="text" class="validate">
+					<label for="name">Имя</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-account prefix"></i>
+					<input id="lastname" type="text" class="validate">
+					<label for="lastname">Фамилия</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-face prefix"></i>
+					<input id="username" type="text" class="validate">
+					<label for="username">Никнейм</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-lock prefix"></i>
+					<input id="password" type="password" class="validate">
+					<label for="password">Пароль</label>
+				</div>
+				<div class="input-field col s12">
+					<i class="zmdi zmdi-account-box prefix"></i>
+					<input id="DNI" type="text" class="validate">
+					<label for="DNI">Купон</label>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="waves-effect btn-flat tooltipped" data-position="top" data-tooltip="Send"><i class="zmdi zmdi-mail-send"></i></a>
+			<a href="#!" class="modal-action modal-close waves-effect btn-flat tooltipped" data-position="top" data-tooltip="Cancel"><i class="zmdi zmdi-close"></i></a>
+		</div>
+	</form>
+						<style type="text/css">
+                            .tme{
+                                font: 13px Arial;
+                            }
+							.NavBar{
+								background: #333;
+							}
+                            
+                            #iframe{
+                                width: 1320px;
+                                height: 500px;
+                                border: 0px;
+                                
+                            }
+                            
+                            
+						</style>
+						
+	<nav class="NavBar full">
+		<div class="row">
+			<div class="tittles NavBar-logo col s12 m3">electronics</div>
+			<ul class="NavBar-links col m9">
+				<li><a href="index.html" class="waves-effect">Главная</a></li>
+				<li><a href="javascript://" onclick="regWork('forIframe.html')" class="waves-effect">Магазин</a></li>
+				<li><a href="#RegModal" class="waves-effect modal-trigger">Регистрация</a></li>
+				<li><a href="#!" class="waves-effect btn-shopcart">Категории</a></li>
+				<li><a href="#LoginModal" class="waves-effect modal-trigger">Вход</a></li>	
+			</ul>
+			<i class="zmdi zmdi-more-vert full btn-menu hide-on-med-and-up waves-effect"></i>
+		</div>
+	</nav>
+	<div class="full ShoppingCart valign-wrapper">
+		<div class="container valign">
+			<div class="row valign-wrapper">
+				<div class="col s12 m6 valign">
+					<p class="center-align" style="color: #2F9FF3;">
+						<a href="#"><i class="zmdi zmdi-shopping-cart zmdi-hc-5x"></i></a>
+					</p>
+					<p class="center-align">
+						<a class="btn-floating waves-effect waves-light red tooltipped" data-position="bottom" data-tooltip="Empty cart" style="margin-right: 17px;"><i class="zmdi zmdi-delete"></i></a>
+						<a class="btn-floating waves-effect waves-light green tooltipped" data-position="bottom" data-tooltip="Confirm purchase"><i class="zmdi zmdi-money"></i></a>
+					</p>
+				</div>
+				<div class="col s12 m6 valign">
+					<table class="centered highlight responsive-table">
+				        <thead>
+				          	<tr>
+								<th>Товаров</th>
+								<th>В наличии</th>
+				          	</tr>
+				        </thead>
+				        <tbody>
+					        <tr>
+                                <td><a href="tvs.html">Телевизоры</a></td>
+					            <td>142</td>
+					        </tr>
+					        <tr>
+					            <td><a href="mir.html">Фотоаппараты</a></td>
+					            <td>32</td>
+					        </tr>
+					        <tr>
+					            <td><a href="phones.html">Смартфоны</a></td>
+					            <td>150</td>
+					        </tr>
+				        	<tr>
+                                <td><a href="grdn.html">Товары для Сада</a></td>
+				        		<td>32</td>
+				        	</tr>
+                            <tr>
+                                <td><a href="WashMachines.html">Стиральные машины</a></td>
+					            <td>42</td>
+					        </tr>
+                            <tr>
+                                <td><a href="games.html">Приставки</a></td>
+					            <td>14</td>
+					        </tr><tr>
+                                <td><a href="Comps.html">Компьютеры</a></td>
+					            <td>32</td>
+					        </tr>
+                            <tr>
+                                <td><a href="products.html">Холодильники</a></td>
+					            <td>82</td>
+					        </tr>
+                            <tr>
+                                <td><a href="ech.html">Шуруповерты, дрели и перфораторы</a></td>
+					            <td>102</td>
+					        </tr>
+				        </tbody>
+      				</table>	
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    
+    
+    
+    
+	<iframe id="iframe" src="ink.html"></iframe>
+    
+    
+    
+    
+    
+    
+    
+	<section class="full new-prod">
+		<h5 class="tittles center-align">Что мы предлагаем</h5>
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m6 l4">
+                    <!-- Ахуенный блок наводки | BLRMYFC рекомендует -->
+					<div class="card hoverable">
+						<figure class="card-image">
+							<img src="assets/img/header.png" >
+                            <br><br>
+							<figcaption class="card-title">Теле-Видео-Аудио</figcaption>
+						</figure>
+						<div class="card-content">
+							<p class="tme">
+								Телевизоры, Домашние кинотеатры, DVB-С/T2 ресиверы, Кабели и переходники, Кронштейны, Наушники и гарнитуры
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="tvs.html">Посмотреть</a>
+						</div>
+					</div>
+				</div>	
+				<div class="col s12 m6 l4">
+					<div class="card hoverable">
+						<figure class="card-image">
+							<img src="assets/img/kitchen.jpg" >
+                            <br><br>
+							<figcaption class="card-title">Товары для кухни</figcaption>
+						</figure>
+						<div class="card-content">
+							<p class="tme">
+								Холодильники, Электрические плиты, Газовые плиты, Микроволновые печи, Чайники электрические, Кофеварки
+                            </p>
+						</div>
+						<div class="card-action">
+							<a href="products.html">Посмотреть</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m6 l4">
+					<div class="card hoverable">
+						<figure class="card-image">
+							<img src="assets/img/comps.jpg" >
+							<figcaption class="card-title">Компьютеры и оргтехника </figcaption>
+						</figure>
+						<div class="card-content">
+							<p class="tme">
+								Ноутбуки, Планшеты, Настольные компьютеры, Принтеры, Комплекты клавиатура мышь, Жесткие диски
+							</p>
+						</div>
+						<div class="card-action">
+							<a href="Comps.html">Посмотреть</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="full promo">
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<h5 class="tittles center-align">Разные способы оплаты</h5>
+					<p>
+						Немецкая сеть по продаже электроники и бытовой техники №1 в Европе. Мы продаем только сертифицированные товары для дома и быта. В каталоге представлено более 200 000 наименований, которые можно заказать на сайте с доставкой по Казани или забрать самовывозом. Мы также предлагаем качественную установку и настройку любой техники. Приятных покупок! Товар можно оплатить прямо на кассе, или можно заказать с нашего сайта
+					</p>
+				</div>
+			    <div class="col s12 m4">
+			    	<p class="center-align">
+			        	<i class="zmdi zmdi-card-giftcard zmdi-hc-5x"></i>
+			    	</p>
+			        <p class="center-align flow-text">Электронными деньгами</p>
+			        <p>
+			        	Вы можете купить товар на нашем сайте и расплатиться электронным кошельком
+			        </p>
+			    </div>
+			    <div class="col s12 m4">
+			    	<p class="center-align">
+			        	<i class="zmdi zmdi-card zmdi-hc-5x"></i>
+			    	</p>
+			        <p class="center-align flow-text">Картой</p>
+			        <p>
+			        	Так же можете купить товар и расплатиться картой
+			        </p>
+			    </div>
+			    <div class="col s12 m4">
+			    	<p class="center-align">
+			        	<i class="zmdi zmdi-money zmdi-hc-5x"></i>
+			    	</p>
+			        <p class="center-align flow-text">Наличными</p>
+			        <p>
+			        	Мы предлагаем нашим клиентам, купить товари прямо в нашем магазине.
+			        </p>
+			    </div>
+		    </div>
+		</div>	
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m6">
+					<h5>Обратите внимание</h5>
+					<p>
+						Розничный магазин «Electronics» объединился с одним из крупнейших российских магазинов бытовой техники и электроники «Холодильник.ру».
+Теперь вы можете пользоваться всеми преимуществами покупок в крупном магазине:
+
+ широчайший ассортимент товаров,
+ еженедельные акции и предложения со скидками, подарками и бонусами,
+ регулярные распродажи техники от ведущих отечественных и зарубежных производителей,
+ любые способы оплаты,
+ возможность покупки в кредит и в рассрочку,
+ программа лояльности для постоянных покупателей,
+ партнерские программы с крупными банками и компаниями («Спасибо от Сбербанка», «Много.ру», «Аэрофлот Бонус» и др.),
+ и многое другое.
+					</p>
+				</div>
+				<div class="col s12 m6">
+					<h5 class="center-align">Расскажите о нас друзьям</h5>
+					<ul class="center-align">
+						<li><a href="#!"><i class="zmdi zmdi-facebook"></i> &nbsp; Facebook</a></li>
+						<li><a href="#!"><i class="zmdi zmdi-twitter"></i> &nbsp; Twitter</a></li>
+						<li><a href="#!"><i class="zmdi zmdi-google-plus"></i> &nbsp; Google+</a></li>
+						<li><a href="#!"><i class="zmdi zmdi-instagram"></i> &nbsp; Instagram</a></li>
+					</ul>	
+				</div>
+				<div class="col s12 tittles footer-copyright">electronics &copy; 2018</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
