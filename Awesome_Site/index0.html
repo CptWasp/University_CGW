@@ -1,0 +1,66 @@
+<html>
+<head>
+</head>
+<body>
+    
+    
+    
+    
+    
+    
+    
+    
+<script type="text/javascript">
+    function usePassword(){
+        var x = document.getElementById("tp1");
+       
+        
+       if(x.value!="alex") document.write("Wrong Password");
+        
+        
+        
+        var links=[];
+        links[0] ={name:".Точка Входа.", href:"index.html"};
+        var nav = document.getElementById("navigation");
+        
+            for(var j=0; j<links.length; j++){
+                var item = document.createElement("a");
+                item.innerText = links[j].name + " ";
+                item.setAttribute('href', links[j].href);
+                nav.appendChild(item);
+            
+            }
+    }
+        
+ 
+</script>  
+    <center>
+   <form>
+        <div id="back">
+        <input type="password" id="tp1">
+		<input type="button" value="Sign In" onclick="usePassword()">
+    </form>
+		<center><div  id="navigation"></div></center>
+    </center>
+    
+    <style type="text/css">
+		a{
+			text-decoration: none;
+		}
+	
+		#back{
+			margin-top: 20px;
+			
+			
+		}
+		#navigation{
+			color: #333;
+			text-decoration: none;
+			font: bold 32px Arial;
+		}
+	</style>
+    
+    
+    
+</body>
+</html>
