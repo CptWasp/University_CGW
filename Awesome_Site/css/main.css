@@ -1,9 +1,9 @@
-/*Importando hojas de estilo*/
+
 @import 'normalize.css';
 @import 'materialize.min.css';
 @import 'material-design-iconic-font.min.css';
 
-/*Tipografia*/
+
 @font-face{
     font-family: "Tittles";
     src: url("../fonts/goodtime.ttf"), 
@@ -20,9 +20,7 @@
     url("../fonts/sourcesanspro.woff2"), 
     url("../fonts/sourcesanspro.svg");
 }
-/*=====================================================
-					Estilos generales
-======================================================*/
+
 body,
 html{
 	font-family: "Text";
@@ -94,7 +92,7 @@ figure{
 	color: #fff;
 	line-height: 50px;
 }
-/*====== Boton menu movil*/
+
 .btn-menu{
 	position: absolute;
 	z-index: 9;
@@ -109,7 +107,7 @@ figure{
 	cursor: pointer;
 	font-size: 27px !important;
 }
-/*====== Carrito de compras*/
+
 .ShoppingCart{
 	background-color: #EEEEEE;
 	overflow: hidden;
@@ -123,12 +121,12 @@ figure{
 	height: auto !important;
 	opacity: 1;
 }
-/*====== Encabezado*/
+
 .header{
 	min-height: 80%;
 	padding: 30px 0;
 }
-/*====== Seccion promo index*/
+
 .promo,
 .new-prod{
 	padding: 40px 0;
@@ -137,7 +135,7 @@ figure{
 .promo i{
 	color: #EE6E73;
 }
-/*====== footer*/
+
 .footer{
 	padding: 30px 0;
 	background-color: #2F9FF3;
@@ -151,9 +149,7 @@ figure{
 	color: #fff;
 	border-top:1px solid rgba(255,255,255,.2);
 }
-/*=====================================================
-					Media  Queries
-======================================================*/
+
 @media (max-width: 600px){
 	.NavBar{
 		overflow: hidden;

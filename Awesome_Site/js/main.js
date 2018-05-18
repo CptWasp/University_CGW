@@ -15,7 +15,7 @@ $(document).ready(function(){
 			body.addClass('No-Scroll');
 		}
 	});
-	/*Mostrar carrito de compras*/
+	
 	$('.btn-shopcart').on('click', function(e){
 		e.preventDefault();
 		var kart=$('.ShoppingCart');
